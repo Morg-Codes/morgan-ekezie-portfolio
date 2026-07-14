@@ -1,4 +1,7 @@
 # Morgan Ekezie — Personal Portfolio
+
+A professional portfolio website designed to showcase my cybersecurity journey, Java development projects, technical skills, certifications, education, and professional growth.
+
 ## Live Website
 
 [View the live portfolio](https://morg-codes.github.io/morgan-ekezie-portfolio/)
@@ -11,9 +14,7 @@
 | Accessibility | 100 | 100 |
 | Best Practices | 100 | 100 |
 | SEO | 100 | 100 |
-A professional portfolio website designed to showcase my
-cybersecurity journey, Java development projects, technical skills,
-certifications, education, and professional growth.
+
 
 ## Professional Identity
 
