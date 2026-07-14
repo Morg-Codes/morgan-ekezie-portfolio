@@ -1,0 +1,172 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1200"
+    height="630"
+    viewBox="0 0 1200 630"
+>
+    <title>Morgan Ekezie Portfolio Social Preview</title>
+
+    <desc>
+        Social sharing preview for Morgan Ekezie’s cybersecurity
+        and software development portfolio.
+    </desc>
+
+    <defs>
+        <linearGradient
+            id="background"
+            x1="0"
+            y1="0"
+            x2="1"
+            y2="1"
+        >
+            <stop offset="0%" stop-color="#07140f" />
+            <stop offset="100%" stop-color="#0d2119" />
+        </linearGradient>
+
+        <radialGradient
+            id="glow"
+            cx="50%"
+            cy="50%"
+            r="50%"
+        >
+            <stop
+                offset="0%"
+                stop-color="#34d399"
+                stop-opacity="0.18"
+            />
+            <stop
+                offset="100%"
+                stop-color="#34d399"
+                stop-opacity="0"
+            />
+        </radialGradient>
+    </defs>
+
+    <rect
+        width="1200"
+        height="630"
+        fill="url(#background)"
+    />
+
+    <circle
+        cx="1050"
+        cy="110"
+        r="330"
+        fill="url(#glow)"
+    />
+
+    <circle
+        cx="140"
+        cy="610"
+        r="260"
+        fill="url(#glow)"
+    />
+
+    <rect
+        x="48"
+        y="48"
+        width="1104"
+        height="534"
+        rx="28"
+        fill="none"
+        stroke="#34d399"
+        stroke-opacity="0.35"
+        stroke-width="2"
+    />
+
+    <rect
+        x="82"
+        y="82"
+        width="122"
+        height="122"
+        rx="26"
+        fill="#0a1c15"
+        stroke="#34d399"
+        stroke-width="3"
+    />
+
+    <text
+        x="143"
+        y="158"
+        fill="#f5faf7"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="48"
+        font-weight="700"
+        text-anchor="middle"
+    >
+        ME
+    </text>
+
+    <circle
+        cx="186"
+        cy="168"
+        r="7"
+        fill="#e8c45c"
+    />
+
+    <text
+        x="82"
+        y="290"
+        fill="#e8c45c"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="25"
+        font-weight="700"
+        letter-spacing="4"
+    >
+        PERSONAL PORTFOLIO
+    </text>
+
+    <text
+        x="82"
+        y="375"
+        fill="#f5faf7"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="72"
+        font-weight="700"
+    >
+        Morgan Ekezie
+    </text>
+
+    <text
+        x="82"
+        y="430"
+        fill="#a9b9b1"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="31"
+        font-weight="400"
+    >
+        Cybersecurity Student  |  Java Developer
+    </text>
+
+    <line
+        x1="82"
+        y1="475"
+        x2="650"
+        y2="475"
+        stroke="#34d399"
+        stroke-width="3"
+    />
+
+    <text
+        x="82"
+        y="525"
+        fill="#dbe7e1"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="23"
+        font-weight="400"
+    >
+        Projects  •  Skills  •  Education  •  Certifications
+    </text>
+
+    <text
+        x="1118"
+        y="540"
+        fill="#34d399"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="22"
+        font-weight="700"
+        text-anchor="end"
+    >
+        morg-codes.github.io
+    </text>
+</svg>
