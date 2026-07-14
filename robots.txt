@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://morg-codes.github.io/morgan-ekezie-portfolio/sitemap.xml
