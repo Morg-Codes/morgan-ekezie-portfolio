@@ -67,3 +67,47 @@ if (menuToggle && navigationMenu) {
         }
     });
 }
+
+/* ---------- Active navigation link ---------- */
+
+const pageSections = document.querySelectorAll("main section[id]");
+const pageNavigationLinks = document.querySelectorAll(
+    '.nav-links a[href^="#"]'
+);
+
+function updateActiveNavigation(sectionId) {
+    pageNavigationLinks.forEach((link) => {
+        const isCurrentSection =
+            link.getAttribute("href") === `#${sectionId}`;
+
+        link.classList.toggle("is-active", isCurrentSection);
+
+        if (isCurrentSection) {
+            link.setAttribute("aria-current", "page");
+        } else {
+            link.removeAttribute("aria-current");
+        }
+    });
+}
+
+if (pageSections.length && pageNavigationLinks.length) {
+    const sectionObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    updateActiveNavigation(entry.target.id);
+                }
+            });
+        },
+        {
+            rootMargin: "-20% 0px -70% 0px",
+            threshold: 0
+        }
+    );
+
+    pageSections.forEach((section) => {
+        sectionObserver.observe(section);
+    });
+
+    updateActiveNavigation("home");
+}

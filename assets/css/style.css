@@ -2215,3 +2215,52 @@ p {
         transform: translate(50%, 0);
     }
 }
+
+/* ---------- Active navigation state ---------- */
+
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -0.45rem;
+    left: 0;
+
+    height: 2px;
+    border-radius: 999px;
+
+    background-color: var(--color-gold-400);
+
+    opacity: 0;
+    transform: scaleX(0);
+
+    transition:
+        opacity var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.nav-links a.is-active {
+    color: var(--color-text-primary);
+}
+
+.nav-links a.is-active::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+
+/* ---------- Mobile active navigation state ---------- */
+
+@media (max-width: 900px) {
+    .nav-menu .nav-links a::after {
+        display: none;
+    }
+
+    .nav-menu .nav-links a.is-active {
+        background-color: rgba(52, 211, 153, 0.08);
+        color: var(--color-emerald-300);
+    }
+}
