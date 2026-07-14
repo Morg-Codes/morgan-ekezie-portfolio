@@ -2264,3 +2264,73 @@ p {
         color: var(--color-emerald-300);
     }
 }
+
+/* ---------- Scroll reveal animations ---------- */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(32px);
+
+    transition:
+        opacity 700ms ease var(--reveal-delay, 0ms),
+        transform 700ms ease var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ---------- Reveal animation variations ---------- */
+
+.hero-visual.reveal {
+    transform: translateX(32px);
+}
+
+.hero-visual.reveal.is-visible {
+    transform: translateX(0);
+}
+
+.about-card.reveal,
+.skill-card.reveal,
+.project-card.reveal,
+.education-card.reveal,
+.certification-card.reveal,
+.learning-card.reveal,
+.contact-card.reveal {
+    transform: translateY(24px) scale(0.985);
+}
+
+.about-card.reveal.is-visible,
+.skill-card.reveal.is-visible,
+.project-card.reveal.is-visible,
+.education-card.reveal.is-visible,
+.certification-card.reveal.is-visible,
+.learning-card.reveal.is-visible,
+.contact-card.reveal.is-visible {
+    transform: translateY(0) scale(1);
+}
+
+
+/* ---------- Reduced-motion accessibility ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        transition-delay: 0ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}

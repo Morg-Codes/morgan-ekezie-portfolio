@@ -111,3 +111,65 @@ if (pageSections.length && pageNavigationLinks.length) {
 
     updateActiveNavigation("home");
 }
+
+/* ---------- Scroll reveal animations ---------- */
+
+const revealElements = document.querySelectorAll(
+    [
+        ".hero-content",
+        ".hero-visual",
+        ".about-heading",
+        ".about-content",
+        ".about-card",
+        ".skills-heading",
+        ".skill-card",
+        ".skills-footer",
+        ".projects-heading",
+        ".project-card",
+        ".projects-note",
+        ".credentials-heading",
+        ".education-card",
+        ".certification-card",
+        ".learning-card",
+        ".credentials-note",
+        ".contact-content",
+        ".contact-card"
+    ].join(", ")
+);
+
+const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+).matches;
+
+if (prefersReducedMotion) {
+    revealElements.forEach((element) => {
+        element.classList.add("is-visible");
+    });
+} else if (revealElements.length) {
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            });
+        },
+        {
+            rootMargin: "0px 0px -10% 0px",
+            threshold: 0.12
+        }
+    );
+
+    revealElements.forEach((element, index) => {
+        element.classList.add("reveal");
+        element.style.setProperty(
+            "--reveal-delay",
+            `${Math.min(index % 4, 3) * 80}ms`
+        );
+
+        revealObserver.observe(element);
+    });
+}
